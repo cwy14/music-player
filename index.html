@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>音乐播放器</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script type="text/javascript" src="js/public-methods.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<div id="container">
+		<audio autobuffer>
+			<source src="source/茶太 - ？？.mp3">
+			<object data="source/茶太 - ？？.mp3" width="290" height="45">
+				<param name="src" value="source/茶太 - ？？.mp3">
+				<param name="autoplay" value="false">
+				<param name="autoStart" value="0">
+				<!-- <p><a href="/media/audio.wav">Download this audio file.</a></p> -->
+			</object>
+		</audio>
+
+		<div class="playlist">
+			<span>正在播放</span>
+			<ul>
+				<li>
+					<div class="name"></div>
+					<div class="singer"></div>
+					<span class="delete">X</span>
+				</li>
+				<li>
+					<div class="name"></div>
+					<div class="singer"></div>
+					<span class="delete">X</span>
+				</li>
+				<li>
+					<div class="name"></div>
+					<div class="singer"></div>
+					<span class="delete">X</span>
+				</li>
+				<li>
+					<div class="name"></div>
+					<div class="singer"></div>
+					<span class="delete">X</span>
+				</li>
+				<li>
+					<div class="name"></div>
+					<div class="singer"></div>
+					<span class="delete">X</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="singer-info">
+			<img src="image/85b2fa971365f473b442c11f7d88d7b4.jpg" width="140" height="140">
+			<span>singer</span>
+		</div>
+
+		<div class="song-info">
+			<span class="song-name"></span>
+			<span class="remain-time"></span>
+		</div>
+
+		<div class="control-bar">
+			<div class="v-center">
+				<div class="total-time" title="aaa">
+					<div class="current-time">
+						<div class="time-control"></div>
+					</div>
+				</div>
+			</div>
+			<a href="javascript:;" class="mode"><i class="iconfont">&#xe630;</i></a>
+			<a href="javascript:;" class="volume"><i class="iconfont">&#xe61f;</i></a>
+			<div class="max-volume">
+				<div class="current-volume">
+					<div class="volume-control"></div>
+				</div>
+			</div>
+			<div class="play-control">
+				<a href="javascript:;" class="prev"><i class="iconfont">&#xe750;</i></a>
+				<a href="javascript:;" class="play"><i class="iconfont">&#xe61d;</i></a>
+				<a href="javascript:;" class="next"><i class="iconfont">&#xe751;</i></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
