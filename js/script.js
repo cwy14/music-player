@@ -1,14 +1,15 @@
 window.onload = function () {
 	var audio = document.getElementsByTagName('audio')[0];
 	var container = document.getElementById('container');
-	var songsLists = ["茶太 - ？？.mp3",
+	var songsLists = ["坂本真綾 - 色彩.mp3",
+					"茶太 - ？？.mp3",
 					"野中藍 - 黒ネコのタンゴ ／ やよゐ.mp3",
 					"南里侑香 - 焔の扉.mp3",
-					"南里侑香 - 暁の车.mp3",
-					"FictionJunction - 暁の车(piano version).mp3",];
+					"南里侑香 - 暁の车.mp3"];
 	var songIndex = 0;
 	var songName = getByClass(document,"song-name")[0];
 	var remainTime = getByClass(document,"remain-time")[0];
+	var singerInfo = getByClass(document,"singer-info")[0];
 
 	var timeControl = getByClass(container,"time-control")[0];//进度条拖动按钮
 	var currentTime = getByClass(container,"current-time")[0];//已播放的进度条
@@ -46,6 +47,8 @@ window.onload = function () {
 								+Math.floor((audio.duration-audio.currentTime)%60/10)
 								+Math.floor((audio.duration-audio.currentTime)%60%10);
 		songName.innerHTML = name+" -- "+singer;
+		singerInfo.getElementsByTagName('img')[0].src = "image/"+singer+".jpg";
+		singerInfo.getElementsByTagName('span')[0].innerHTML = singer;
 	});
 
 	/*
